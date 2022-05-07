@@ -1,0 +1,1 @@
+This is a repo where i experiment on the usage of variables, functions, datatypes, control flow and many more in rust.
