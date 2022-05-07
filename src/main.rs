@@ -136,6 +136,8 @@ fn main() {
     
     let value: f64 = 32.0;
     println!("The value of {} fahrenheit in celsius is {}", value, fahrenheit_to_celsius(&value));
+
+    println!("{}", get_nth_fab(1))
     
 }
 
@@ -153,4 +155,26 @@ fn five() -> u32 {
 
 fn fahrenheit_to_celsius(fah: &f64) -> f64 {
     (fah - 32.0) * (5.0/9.0)
+}
+
+fn get_nth_fab(nth: u32) -> u32 {
+    let mut first = 0;
+    let mut second = 1;
+
+    if nth == 1 {
+        return first
+    } else if nth == 2 {
+        return second
+    }
+
+    let mut position = 2;
+
+    while nth > position {
+        let temp = first;
+        first = second;
+        second = temp + second;
+
+        position += 1;
+    }
+    second  
 }
