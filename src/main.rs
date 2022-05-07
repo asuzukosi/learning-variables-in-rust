@@ -132,7 +132,10 @@ fn main() {
 
     let my_range_arr = [1..4];
     
-    println!("{:?}", my_range_arr)
+    println!("{:?}", my_range_arr);
+    
+    let value: f64 = 32.0;
+    println!("The value of {} fahrenheit in celsius is {}", value, fahrenheit_to_celsius(&value));
     
 }
 
@@ -146,4 +149,8 @@ fn say_something_nice(x: &u32, y: u32) {
 // functions with return values
 fn five() -> u32 {
     15
+}
+
+fn fahrenheit_to_celsius(fah: &f64) -> f64 {
+    (fah - 32.0) * (5.0/9.0)
 }
